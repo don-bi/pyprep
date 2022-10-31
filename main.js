@@ -19,36 +19,51 @@ window.addEventListener("scroll", function(){
 })
 
 //animation for title loading in
-const title = document.querySelector(".main.index .one .title");
-const titleTextArray = title.textContent.split("");
-title.textContent = "";
+const title = document.querySelector(".main#index .one .title");
+if (title != null) {
+    const titleTextArray = title.textContent.split("");
+    title.textContent = "";
 
-let tick = 0;
-let char = 0;
-let timer = setInterval(onTick, 50);
-let currentText = title.textContent;
+    let tick = 0;
+    let char = 0;
+    let timer = setInterval(onTick, 50);
+    let currentText = title.textContent;
 
-function onTick(){
-    let typing = "";
-    if (tick%12=== 0) typing = "|";
+    function onTick(){
+        let typing = "";
+        if (tick%12=== 0) typing = "|";
 
-    title.textContent = `${currentText}${typing}`;
-    
-    if ((tick < 34 || tick > 80)) {
-        if (char < titleTextArray.length) {
-            currentText += titleTextArray[char];
-            char ++;
+        title.textContent = `${currentText}${typing}`;
+        
+        if ((tick < 34 || tick > 80)) {
+            if (char < titleTextArray.length) {
+                currentText += titleTextArray[char];
+                char ++;
+            }
+            if (tick > 123){
+                complete();
+                return;
+            }
         }
-        if (tick > 123){
-            complete();
-            return;
-        }
+        tick ++;
     }
-    tick ++;
+
+    function complete(){
+        clearInterval(timer);
+        timer = null;
+        title.textContent = title.substring(0,title.textContent.length-1);
+    }
 }
 
-function complete(){
-    clearInterval(timer);
-    timer = null;
-    title.textContent = title.substring(0,title.textContent.length-1);
-}
+//current page's name
+const activePage = window.location.pathname;
+
+const navLinks = document.querySelectorAll("nav ul a");
+console.log("navlinks");
+console.log(navLinks);
+navLinks.forEach(link => {
+    //checks each navbar link's location and if they point to activePage make them active
+    if(link.href.includes(`${activePage}`)){
+        link.classList.add("active");
+    }
+})

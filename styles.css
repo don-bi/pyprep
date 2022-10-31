@@ -7,7 +7,6 @@ body {
     flex-direction: column;
 
     margin: 0;
-    height: 2000px;
 }
 
 header {
@@ -40,7 +39,8 @@ header a {
 }
 
 header a:hover,
-header.sticky a:hover {
+header.sticky a:hover,
+header a.active {
     color:rgb(199, 180, 86);
 }
 
@@ -80,28 +80,28 @@ header.sticky .logo {
 }
 
 /* for index main content */
-.main.index .one {
+.main#index .one {
     display: flex;
     flex-direction: column;
     
-    padding: 200px 325px;
+    padding: 168px 325px;
     background-color: rgb(72, 79, 102);
 }
 
-.main.index .one .title {
+.main#index .one .title {
     color: rgb(255, 232, 115);
     font-size: 48px;
     font-weight: 500;
 }
 
-.main.index .one .description {
+.main#index .one .description {
     width: 650px;
     margin-top: 12px;
     color: rgb(255, 232, 115);
     line-height: 1.7;
 }
 
-.main.index .two {
+.main#index .two {
     height: 200px;
     background-color: rgb(66, 71, 88);
 }
@@ -117,7 +117,7 @@ header.sticky .logo {
 
     background-color: rgb(115, 122, 152);
     color: rgb(255, 232, 115);
-    border: 3px solid rgb(66, 71, 88);
+    border:none;
 
     transition: 0.15s;
 }
@@ -126,3 +126,97 @@ header.sticky .logo {
     background-color: rgb(89, 96, 128);
     color: rgb(199, 180, 86);
 }
+
+.two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 230px;
+    padding: 60px 0px;
+}
+
+.two-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    gap: 15px;
+}
+
+.two-icon img {
+    width: 70%;
+    height: auto;
+}
+
+.two-icon .blurb {
+    color: rgb(255, 232, 115);
+    font-weight: 400;
+    text-align: center;
+}
+
+/* for about-us main content */
+
+.main#about-us .one {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 168px 325px;
+    background-color: rgb(72, 79, 102);
+}
+
+.main#about-us .one .title {
+    color: rgb(255, 232, 115);
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.main#about-us .one .description {
+    width: 850px;
+    margin-top: 12px;
+    color: rgb(255, 232, 115);
+    font-size: 18px;
+    font-weight: 370;
+    line-height: 2.3;
+}
+
+.main#about-us .one .signature {
+    width: 850px;
+    color: rgb(255, 232, 115);
+    font-size: 36px;
+    line-height: 2.3;
+    text-align: right;
+    margin-bottom: 80px;
+}
+
+.main#join-us .one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 168px 325px;
+    background-color: rgb(72, 79, 102);
+}
+
+iframe {
+    background-color: rgb(63, 73, 99);
+    border-radius: 25px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 63, 83);
+    padding: 10px 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(255, 232, 115);
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color:rgb(199, 180, 86);
+}
+
