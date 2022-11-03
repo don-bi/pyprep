@@ -80,7 +80,7 @@ header.sticky .logo {
 }
 
 /* for index main content */
-.main#index .one {
+.main .one{
     display: flex;
     flex-direction: column;
     
@@ -88,7 +88,7 @@ header.sticky .logo {
     background-color: rgb(72, 79, 102);
 }
 
-.main#index .one .title {
+.main .one .title {
     color: rgb(255, 232, 115);
     font-size: 48px;
     font-weight: 500;
@@ -156,20 +156,6 @@ header.sticky .logo {
 
 /* for about-us main content */
 
-.main#about-us .one {
-    display: flex;
-    flex-direction: column;
-    
-    padding: 168px 325px;
-    background-color: rgb(72, 79, 102);
-}
-
-.main#about-us .one .title {
-    color: rgb(255, 232, 115);
-    font-size: 48px;
-    font-weight: 500;
-}
-
 .main#about-us .one .description {
     width: 850px;
     margin-top: 12px;
@@ -195,6 +181,40 @@ header.sticky .logo {
     
     padding: 168px 325px;
     background-color: rgb(72, 79, 102);
+}
+
+.main#curriculum .list {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main#curriculum .unit {
+    display: flex;
+}
+
+.main#curriculum .icon {
+    width: 6%;
+    height: 6%;
+}
+
+#curriculum .one .text {
+    margin-left : 12px;
+}
+
+#curriculum .one .lesson {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(255, 232, 115);
+}
+
+.main#curriculum .one .description {
+    width: 850px;
+    color: rgb(255, 232, 115);
+    font-size: 18px;
+    font-weight: 370;
+    line-height: 2.3;   
 }
 
 iframe {
