@@ -178,9 +178,17 @@ header.sticky .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
     padding: 168px 325px;
     background-color: rgb(72, 79, 102);
+}
+
+#curriculum .one,
+#about-us .one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main#curriculum .list {
