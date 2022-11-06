@@ -63,7 +63,7 @@ console.log("navlinks");
 console.log(navLinks);
 navLinks.forEach(link => {
     //checks each navbar link's location and if they point to activePage make them active
-    if(link.href.includes(`${activePage}`)){
+    if(link.href.includes(`${activePage}`) && activePage.length > 1){
         link.classList.add("active");
     }
 })
