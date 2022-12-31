@@ -248,3 +248,6 @@ footer a:hover {
     color:rgb(199, 180, 86);
 }
 
+button {
+    cursor: pointer;
+}
